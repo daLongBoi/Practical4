@@ -6,9 +6,17 @@ namespace SMS.Web.Controllers;
 
 public class HomeController : Controller
 {
-     public IActionResult About()
+    public IActionResult Index()
     {
-        return Content("the about page");
+        return View();
+    }
+    public IActionResult About()
+    {
+        return View();
+    }
+    public IActionResult Privacy()
+    {
+        return View();
     }
 
 }
