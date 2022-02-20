@@ -8,22 +8,20 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        return View();
+       var index = new IndexViewModel {
+        Message = "ERROR 243 PLEASE RELOAD WEBPAGE"
+       };
+        return View(index);
     }
     public IActionResult About() 
     {
-     
-        var formed = new DateTime(2020, 01, 01);
-        var days = DateTime.Now.Subtract(formed).Days;
-               
-        //add Strongly typed values to viewbag
-        ViewBag.Formed = formed;
-        ViewBag.Days = days;
-
-   return View();
-
+   var about = new AboutViewModel {
+       Title ="About",
+       Message = "our mission is to develop grat solutions for education etc ",
+       Formed =  new DateTime(2020,01,01) 
+   };    
          // render the view
-          return View();
+          return View(about);
      } 
 
     public IActionResult Privacy()
