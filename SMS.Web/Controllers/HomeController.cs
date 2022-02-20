@@ -10,10 +10,22 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult About()
+    public IActionResult About() 
     {
-        return View();
-    }
+     
+        var formed = new DateTime(2020, 01, 01);
+        var days = DateTime.Now.Subtract(formed).Days;
+               
+        //add Strongly typed values to viewbag
+        ViewBag.Formed = formed;
+        ViewBag.Days = days;
+
+   return View();
+
+         // render the view
+          return View();
+     } 
+
     public IActionResult Privacy()
     {
         return View();
