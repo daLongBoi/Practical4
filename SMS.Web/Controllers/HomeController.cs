@@ -8,6 +8,7 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+        ViewBag.LongTime= DateTime.Now.ToLongDateString();
        var index = new IndexViewModel {
         Message = "ERROR 243 PLEASE RELOAD WEBPAGE"
        };
